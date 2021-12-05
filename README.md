@@ -1,2 +1,2 @@
-# Rk-PaShit-Rkcoder-
+# Rk-PaShit
 This project is released in Google PlayStore by upgrading with Flutter. This is JavaScript project ( Free ).
