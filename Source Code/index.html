@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+
+    <style>
+        body{
+            background:url('bg.jpg');
+            padding: 0;
+            margin: 0;
+        }
+
+        #title{
+            text-align: center;
+            margin-top: 100px;
+            color: white;
+            text-shadow: 5px 10px 2px rgba(102, 87, 235, 0.5);
+        }
+
+        #and{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            /* border: 1px solid red; */
+            width: 99%;
+           
+           
+        }
+
+        #center{
+            width: 300px;
+            height: 100px;
+            background: rgba(0, 0, 255, .5);          
+            border-radius:10px 50px;
+            border: 0;
+            /* box-shadow: 10px 10px 10px black;             */
+        }
+
+        #startbtn{
+            position: absolute;
+            bottom: 200px;
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            left: 50%;
+            transform: translate(-50%);
+            border: 0;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, .8);
+            color: white;
+            font-weight: bolder;
+
+        }
+
+        #info{
+            position: absolute;
+            bottom: 130px;
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            left: 50%;
+            transform: translate(-50%);
+            border: 0;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, .8);
+            color: white;
+            font-weight: bolder;
+
+        }
+
+        #logo{
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin-top: -140px;
+            /* border: 2px solid rgb(18, 18, 245); */
+            box-shadow: 10px 10px 10px black;
+           
+        }
+
+        #about{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, .8);
+            color: white;
+            /* padding-top: 250px; */
+        }
+
+        #about div{
+            margin-top: 250px;
+        }
+
+        #about h2{
+            text-align: center;
+        }
+
+        #about p{
+            padding: 10px 50px;
+        }
+
+        #abb{
+            height: 50px;
+            width: 200px;
+            background: black;
+            color: white;
+            border: 2px solid white;
+            border-radius: 10px;
+            position: absolute;
+            left: 50%;
+            bottom: 130px;
+            transform: translate(-50%);
+            
+        }
+
+        #bgplay{
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            top: 0;
+            
+        }
+
+        #loaddiv h1{
+            height: 5%;
+            text-align: center;
+            position: absolute;
+            top: 45%;
+            color: white;
+        }
+
+        #load{
+            background: transparent;
+            width: 100%;
+           
+        }
+
+        #livebg{
+            background: black;
+            box-shadow: 15px 15px 20px rgba(0, 0, 0, .9);
+            border-radius: 20px;
+            width: 100%;
+           
+        }
+        #livebg1{
+            background: green;
+            box-shadow: 15px 15px 20px rgba(0, 0, 0, .9);
+            border-radius: 20px;
+            width: 0%;
+           
+        }
+
+        
+
+    </style>
+
+</head>
+<body>
+    
+    <h1 id="title">Rk Pashit</h1>
+
+    <div id="and">
+        <button id="center"></button><br>
+        <img src="index.jpg" id="logo">
+        
+    </div  >
+
+    <button id="startbtn">Start</button>
+    <button id="info">About</button>
+
+    <audio autoplay loop id="bgplay">
+        <source src="sound/bgsound.m4a">
+    </audio>
+
+    <div id="about" hidden>
+        <div>
+            <h2>About</h2>
+
+            <p>
+                Version 1.0<br><br>
+                ရခိုင် ပဆိတ် ကျားကွက်သွားနည်းကို အခြေခံ၍ 
+                Technology Gateway computer သင်တန်း <br>( မြောက်ဦးမြို့ ) မှ Rkcoder ရေးသားသည်။
+                <br>
+                Phone &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : 09884005400
+            </p>
+            
+        </div>
+        <button id="abb">Back</button>
+    </div>
+
+
+    <div id="loaddiv" hidden>
+        <h1 id="livebg"></h1>
+        <h1 id="livebg1"></h1>
+        <h1 id="load">Loading <label id="pers"></label></h1>    
+    </div>
+    <script type="text/javascript" src="script/jquery-3.4.1.min.js"></script>
+
+    <script>
+        
+        // $(document).ready(function () {
+            var rot=1;
+            setInterval(()=>{
+                if(rot != "stop"){
+                    $('#center').css({'transform':`rotateZ(-${rot}deg)`});
+                    $('#logo').css({'transform':`rotateZ(${rot}deg)`});
+                    rot++;
+                }
+            },10);
+
+        // });
+
+
+
+            function bgsound(){
+                document.getElementById('bgplay').play();
+            }
+
+            function clicksound(){
+                var sound=document.createElement("audio");
+                sound.setAttribute('src','sound/click.mp3');
+                sound.play();
+            }
+
+            $('#abb').click(()=>{
+                $('#about').prop('hidden',true);
+                clicksound();
+            });
+
+            $('#info').click(()=>{
+                $('#about').prop('hidden',false);
+                clicksound();
+            });
+
+
+            $('#startbtn').click(()=>{
+                clicksound();
+                rot='stop';
+                $('#loaddiv').prop('hidden',false);
+                var per=0
+                setInterval(()=>{
+                    if(per!=101){
+                        $('#livebg1').css({'width':`${per}%`});
+                        $('#pers').html('('+per+'%)');
+                        per++
+                    }
+                },20);
+
+                setTimeout(()=>{
+                   location.replace('play.html');
+                },2100);
+            });
+    </script>
+
+</body>
+</html>

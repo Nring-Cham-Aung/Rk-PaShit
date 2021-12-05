@@ -1,0 +1,406 @@
+    
+    #f1{
+        position: absolute;
+        bottom: 50%;
+        left: 10px;
+        /* transform: translate(-0%,-50%); */
+        height: 130px;
+        width: 50px;
+        background: cadetblue;
+        box-shadow: 10px 10px 10px black;
+        border-radius: 10px 30px;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    #f2{
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        /* transform: translate(-0%,-50%); */
+        height: 130px;
+        width: 50px;
+        background: cadetblue;
+        box-shadow: 10px 10px 10px black;
+        border-radius: 10px 30px;
+        text-align: center;
+        z-index: 1000;
+    }
+    
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background: darkslategrey;
+        
+    }
+
+    #t1{
+        width: 100%;
+        height: 80px;
+        position: absolute;
+        top: 0;
+        background: darkslategrey;
+        text-align: center;
+        
+    }
+
+    #t1t{
+        position: absolute;
+        width: 100%;
+        margin: auto;
+        bottom: 0;
+        transform: rotateZ(180deg);
+        background: gray;
+    }
+
+    #t1l{
+        position: absolute;
+        width: 100%;
+        margin: auto;
+        bottom: 35px;
+        transform: rotateZ(180deg);
+    }
+
+    #t2l{
+        position: absolute;
+        width: 100%;
+        margin: auto;
+        top: 35px;
+    }
+
+    #t2{
+        width: 100%;
+        height: 80px;
+        position: absolute;
+        bottom: 0;
+        background: darkslategrey;
+        text-align: center;
+        
+    }
+
+    #t2t{
+        background: gray;
+    }
+
+    .k1{
+        position: absolute;
+        left: 38px;
+        top: 95px;
+        height: 200px;
+        width: 100px;
+        z-index: 10;
+        transform: rotateZ(335deg);
+    }
+
+    .k1 table{
+        width: 100px;
+        text-align: center;
+        align-content: center;
+        background: cadetblue;
+    }
+
+    .k1 td{
+        width: 30px;
+        height: 25px;
+        border: 1px solid darkslategrey;
+    }
+
+    .k2{
+        position: absolute;
+        top: 95px;
+        right: 38px;
+        height: 200px;
+        width: 100px;
+        z-index: 10;
+        transform: rotateZ(25deg);
+    }
+
+    .k2 table{
+        width: 100px;
+        text-align: center;
+        align-content: center;
+        background: cadetblue;
+    }
+
+    .k2 td{
+        width: 30px;
+        height: 25px;
+        border: 1px solid darkslategrey;
+    }
+
+
+    .k3{
+        position: absolute;
+        bottom: 110px;
+        left: 45px;
+        height: 200px;
+        width: 100px;
+        z-index: 10;
+        transform: rotateZ(25deg);
+    }
+
+    .k3 table{
+        width: 100px;
+        text-align: center;
+        align-content: center;
+        background: cadetblue;
+    }
+
+    .k3 td{
+        width: 30px;
+        height: 25px;
+        border: 1px solid darkslategrey;
+    }
+
+    .k4{
+        position: absolute;
+        bottom: 110px;
+        right: 45px;
+        height: 200px;
+        width: 100px;
+        z-index: 10;
+        transform: rotateZ(335deg);
+    }
+
+    .k4 table{
+        width: 100px;
+        text-align: center;
+        align-content: center;
+        background: cadetblue;
+    }
+
+    .k4 td{
+        width: 30px;
+        height: 25px;
+        border: 1px solid darkslategrey;
+    }
+
+    .base{
+        background: url("xphoto.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    #continer{
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        top: 50%;
+        left: 50%;
+        background: url("container.jpg");
+        border: 2px solid white;
+        border-radius: 50%;
+        transform: translate(-50%,-50%);
+        box-shadow: 15px 15px 20px rgba(0, 0, 0, .5);
+        z-index: 10;
+    }
+
+    #mov{
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        box-shadow: 15px -15px 20px rgba(0, 0, 0, .5),
+                    inset 15px -15px 20px rgba(0, 0, 0, .5),
+                    15px 15px 20px rgba(0, 0, 0, .5),
+                    inset 15px 15px 20px rgba(0, 0, 0, .5);
+        border: 2px solid white;
+        transition: 2s;
+        z-index: 10;
+
+    }
+
+    .t1ks{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 0;
+        background: red;
+        box-shadow: 2px 2px 2px black;
+        margin: auto;
+    }
+
+    .t2ks{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 0;
+        background: yellow;
+        box-shadow: 2px 2px 2px black;
+        margin: auto;
+    }
+
+    .homet1{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 0;
+        background: red;
+        box-shadow: 2px 2px 2px black;
+        margin: 5px;
+    }
+
+    .homet2{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 0;
+        background: yellow;
+        box-shadow: 2px 2px 2px black;
+        margin: 5px;
+    }
+
+    .got2{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 0;
+        background: yellow;
+        box-shadow: 2px 2px 2px black;
+        margin: 5px;
+    }
+
+    .got1{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 0;
+        background: red;
+        box-shadow: 2px 2px 2px black;
+        margin: 5px;
+    }
+
+    .go{ 
+        margin: 5px;
+        color: blue;
+    }
+
+    #t2btn{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        bottom:100px;
+        padding:20px;
+        background:blue;
+        color:white;
+        font-weight: bold;
+        border:0px;
+        border-radius:10px;
+        box-shadow:3px 3px 3px black;
+
+    }
+
+    #t1btn{
+        position:absolute;
+        left:50%;
+        /* transform:translate(-50%); */
+        transform:translate(-50%) rotateZ(180deg);
+        top:100px;
+        padding:20px;
+        background:blue;
+        color:white;
+        font-weight: bold;
+        border:0px;
+        border-radius:10px;
+        box-shadow:3px 3px 3px black;
+
+    }
+
+    .m5{
+        margin: 3px;
+        padding: 3px;
+        background: cyan;
+        border-radius: 10px;
+        font-size: 10px;
+    }
+
+    .not{
+        margin: 3px;
+        padding: 3px;
+        background: red;
+        border-radius: 10px;
+        font-size: 10px
+    }
+
+    #finish{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .8);
+        z-index: 10000;
+        text-align: center;
+        transition: 2s;
+    }
+
+    
+    #win{
+        color: blue;
+        text-align: center;
+        margin-top: 150px;
+    }
+
+    #lose{
+        color: red;
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    .killcls{
+        color: rgb(4, 250, 127);
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .deathcls{
+        color: rgb(255, 155, 6);
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #mainbtn{
+        margin-top: 100px;
+        width: 100px;
+        height: 50px;
+        font-weight: bold;
+        font-size: 22px;
+        background: blueviolet;
+        border: 0;
+        border-radius: 20px;
+    }
+
+    /* .kh{
+        background:rgb(158, 240, 141);
+    } */
+
+#tt{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 0;
+    box-shadow: 30px 15px 15px rgba(0, 0, 0, .5);
+    border-radius: 20px;
+    z-index: 10000;
+    background: cornsilk;
+    text-align: center;
+
+}
+
+#tt button{
+    width: 80px;
+    height: 50px;
+    text-align: center;
+    margin: 30px 30px;
+    border-radius: 15px;
+    border: 0;
+}
